@@ -26,16 +26,17 @@
             </div>
             </div>
         </div>
-        <div id="screen_2">
+        <div id="screen_2" style="display: none;">
         
             <?php include('city.php')?>
         
         </div>
-      <hr>
-
-      <footer>
-        <p>&copy; Let's Movie! 2012</p>
-      </footer>
+        
+        <div id="screen_3" style="display: none;">
+        
+            <?php include('date.php')?>
+        
+        </div>
 
     </div> <!-- /container -->
 <?php include('footer.php'); ?>

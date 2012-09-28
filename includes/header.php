@@ -10,23 +10,27 @@
     <script type="text/javascript" src="js/app.js"></script>
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 10px;
-        padding-bottom: 20px;
-      }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
     <div id="fb-root"></div>
     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '<?php echo $config['app_id'] ?>',
-          status     : true,
-          cookie     : true,
-          xfbml      : true
-        });
+    $(document).ready(function(){
+        function facebookReady(){
+            FB.init({
+                appId  : '<?php echo $config['app_id'] ?>',
+                status : true,
+                cookie : true,
+                xfbml  : true
+            });
+            $(document).trigger("facebook:ready");
+        }
     
-      };
+        if(window.FB) {
+            facebookReady();
+        } else {
+            window.fbAsyncInit = facebookReady;
+        }
+    });
+    
       (function(d){
          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
          if (d.getElementById(id)) {return;}

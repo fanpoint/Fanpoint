@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Response>
+   <Gather numDigits="1" action="/process_gather.php" method="GET" finishOnKey="*">
+	<Say>Hello. Your friend want to invite to to the cinema. Press one if you agree, or zero if you don't want to go.</Say>
+   </Gather>
+</Response>

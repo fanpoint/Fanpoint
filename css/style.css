@@ -1,0 +1,17 @@
+body {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+      
+.hero-unit h1{
+    margin-bottom:10px;
+}
+
+.hero-unit select, 
+.hero-unit input{
+    display:block;
+}
+
+.hero-unit input[type=submit]{
+    padding:5px 10px;
+}

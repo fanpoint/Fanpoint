@@ -1,0 +1,9 @@
+git status
+: pokazuje nam jakie pliki doszly/zmienily sie
+git add file (albo . )
+: dodaje pliki
+git -am commit "tytul"
+: robi commita
+git push -u origin master
+: pushuje na githuba kod
+

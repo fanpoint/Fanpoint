@@ -9,14 +9,15 @@ try{
     
     $db = new PDO('mysql:host='.$config['db_host'].';dbname='.$config['db_name'], $config['db_user'], $config['db_pass']);
     $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $db -> setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES utf8"); 
+    
+    $db->query('SET NAMES utf8');
     
     $facebook = new Facebook(array(
         'appid' => $config['app_id'],
         'secret' => $config['app_secret'] 
     ));
     
-    $actions = array('home', 'users', 'city');
+    $actions = array('home', 'users', 'city', 'movies');
     
     if(isset($_REQUEST['action']) && in_array($_REQUEST['action'], $actions)){    
     

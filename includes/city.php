@@ -2,19 +2,16 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
 	<h1>Select your city</h1>
-	   <form action="" method="post">
+	   <form action="?action=place" method="post">
 		<?php
-		$cities = array(
-			0 => array(
-				'id' => '154',
-				'title' => 'Warsaw',
-			),
-	         	
-		); ?>
+		$sql = "SELECT * FROM city;";
+		$results = $db->query($sql);
+		?>
 		<select>
-		<?php foreach($cities as $city): ?>
-		<option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+		<?php foreach($results as $city): ?>
+		<option value="<?php echo $city['cit_filmaster_id']; ?>"><?php echo $city['cit_name']; ?></option>
 		<?php endforeach; ?>	
+		<input type="submit" class="primary" value="Ok" />
 	   </ul>
 	   </div>
 	   </form>
