@@ -18,11 +18,11 @@ echo "</pre>";
 	<h1>Select your movie</h1>
       </div>
 	<div class="row-fluid">
-            <ul class="thumbnails">
 	<?php foreach($movies as $movie): ?>
+            <ul class="thumbnails">
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://filmaster.pl/film/<?php echo  $movie['film']['permalink']; ?>/image/?width=400" width="180" alt=""/>
+                  <img src="<?php echo $api . $movie['film']['image']; ?>" alt=""/>
                   <div class="caption">
                     <h3><?php echo $movie['film']['title']; ?></h3>
                     <p><?php echo $movie['film']['description']; ?></p>
@@ -33,8 +33,8 @@ echo "</pre>";
                   </div>
                 </div>
               </li>
-	<?php endforeach; ?>	
             </ul>
+	<?php endforeach; ?>	
 </div>
       <footer>
         <p>&copy; Let's Movie! 2012</p>

@@ -17,7 +17,7 @@ try{
         'secret' => $config['app_secret'] 
     ));
     
-    $actions = array('home', 'users', 'city', 'movies');
+    $actions = array('home', 'users', 'city', 'movies', 'friends');
     
     if(isset($_REQUEST['action']) && in_array($_REQUEST['action'], $actions)){    
     

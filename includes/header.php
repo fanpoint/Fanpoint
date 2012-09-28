@@ -8,6 +8,8 @@
     <meta name="author" content="">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+    
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
